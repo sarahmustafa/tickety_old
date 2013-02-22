@@ -1,0 +1,21 @@
+class CreateUsers < ActiveRecord::Migration
+  def change
+    create_table :users do |t|
+      t.string :username
+      t.string :email
+      t.string :crypted_password
+      t.string :salt
+      t.string :name
+      t.boolean :is_customer
+      t.boolean :is_admin
+      t.boolean :is_manager
+      t.integer :reward_points
+      t.string :billing_address
+      t.integer :creditcard_num
+      t.string :creditcard_type
+      t.integer :security_num
+
+      t.timestamps
+    end
+  end
+end
